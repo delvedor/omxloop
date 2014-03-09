@@ -8,7 +8,7 @@ while true; do
 
 	else
 	    sudo sh -c "TERM=linux setterm -foreground black -clear >/dev/tty0"
-	    omxplayer -o local /home/pi/video/domesticherivoluzioni.mov > /dev/null &
+	    omxplayer -o local /home/pi/video/video.extension > /dev/null &
 
 	fi
 done

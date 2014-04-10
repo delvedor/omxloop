@@ -6,15 +6,15 @@ It was built for play a video in loop and hide the console's text. Just press ct
 
 If you want to set it in the system scripts you have to:
 
-	chmod +x omxloop
+	chmod a+x omxloop.sh
 
-	cp omxloop /etc/init.d/
+	cp omxloop.sh /etc/init.d/
 
-	update-rc.d omxloop defaults
+	update-rc.d omxloop.sh defaults
 
 And reboot the system. If you want to disable the scritp just do:
 
-	update-rc.d -f omxloop remove
+	update-rc.d -f omxloop.sh remove
 
 I recommend the use of ssh for all the operations, just for be sure.
 

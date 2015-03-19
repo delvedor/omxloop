@@ -1,30 +1,35 @@
-omxloop
+Omxloop
 =======
 
-Omxloop is a simple script based on Omxplayer who plays a video from console under debian-based systems.
-It was built for play a video in loop and hide the console's text. Just press ctrl+c for kill it.
+Omxloop is a simple bash script who uses [Omxplayer](http://elinux.org/Omxplayer) for play one or more videos in loop, it erases all the console writtens on the screen and plays the video without open the Window-Server.  
+You can both use the script as one time use, by doing:
+```ShellSession
+$ sh omxloop.sh
+```
+Or use it as a system service, so it will starts automatically at every boot, by doing the following:
+```ShellSession
+$ sudo chmod a+x omxloop.sh
 
-If you want to set it in the system scripts you have to:
+$ sudo cp omxloop.sh /etc/init.d/ 
 
-	$ sudo chmod a+x omxloop.sh
+$ cd /etc/init.d/
 
-	$ sudo cp omxloop.sh /etc/init.d/ 
-	
-	$ cd /etc/init.d/
+$ sudo update-rc.d omxloop.sh defaults
 
-	$ sudo update-rc.d omxloop.sh defaults
-	
-	$ sudo reboot
+$ sudo reboot
+```
 
-If you want to disable the scritp just do:
+If you want to remove the script from the system services, just do:
+```ShellSession
+$ cd /etc/init.d/
 
-	$ cd /etc/init.d/
-	
-	$ sudo update-rc.d -f omxloop.sh remove
-	
-	$ sudo rm omxloop.sh
+$ sudo update-rc.d -f omxloop.sh remove
 
-I recommend the use of ssh for all the operations, just for be sure.
+$ sudo rm omxloop.sh
+
+$ sudo reboot
+```
+You can do all this operation by using ssh.
 
 ______________________________________________________________________________________________________________________
 

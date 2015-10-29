@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# @delvedor
+# https://github.com/delvedor/omxloop
+
 SERVICE='omxplayer'
 while true; do
 	if ps ax | grep -v grep | grep $SERVICE > /dev/null
@@ -12,4 +15,3 @@ while true; do
 
 	fi
 done
-

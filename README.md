@@ -3,6 +3,9 @@ Omxloop
 
 Omxloop is a simple bash script who uses [Omxplayer](http://elinux.org/Omxplayer) for play one or more videos in loop, it erases all the console writtens on the screen and plays the video without open the Window-Server.
 
+Few users experienced some issue with the standard `omxloop.sh` file, so I created the `omxloop-v2.sh` who solved the specific issue *(after three/four times the video stops the loop)*.  
+In every case you can use the following how-to guide.
+
 You can both use the script as one time use, by doing:
 ```ShellSession
 $ sh omxloop.sh
@@ -13,7 +16,7 @@ Or use it as a system service, so it will starts automatically at every boot, by
 ```ShellSession
 $ sudo chmod a+x omxloop.sh
 
-$ sudo cp omxloop.sh /etc/init.d/ 
+$ sudo cp omxloop.sh /etc/init.d/
 
 $ cd /etc/init.d/
 
